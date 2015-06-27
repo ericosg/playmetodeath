@@ -7,15 +7,10 @@
 //
 
 import Foundation
-class MenuScene : CCNode
+class LevelScene : CCNode, CCPhysicsCollisionDelegate
 {
     var _hero: CCSprite?
-    
-    override init () {
-        super.init()
-        
-        self.userInteractionEnabled = true
-    }
+    var _physicsNode: CCPhysicsNode?
     
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
         moveHero(touch.locationInNode(self))
@@ -23,6 +18,17 @@ class MenuScene : CCNode
     
     override func touchMoved(touch: CCTouch!, withEvent event: CCTouchEvent!) {
         moveHero(touch.locationInNode(self))
+    }
+    
+    func ccPhysicsCollisionPostSolve(pair: CCPhysicsCollisionPair!, hero nodeA: CCNode!, wildcard nodeB: CCNode!) {
+        println("hit")
+    }
+    
+    func didLoadFromCCB() {
+        userInteractionEnabled = true
+        if let physicsNode = _physicsNode {
+            physicsNode.collisionDelegate = self
+        }
     }
     
     func moveHero(location: CGPoint) {
