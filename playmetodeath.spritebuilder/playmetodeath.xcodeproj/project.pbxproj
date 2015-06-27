@@ -47,10 +47,10 @@
 		8B08DD4A1B3E08E100B3FD8C /* LevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD491B3E08E100B3FD8C /* LevelScene.swift */; };
 		8B08DD6C1B3E4B6C00B3FD8C /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD6B1B3E4B6C00B3FD8C /* Hero.swift */; };
 		8B08DD6E1B3E5B1000B3FD8C /* Level1Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD6D1B3E5B1000B3FD8C /* Level1Scene.swift */; };
-		8B08DD701B3E61F300B3FD8C /* Level2Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD6F1B3E61F300B3FD8C /* Level2Scene.swift */; };
-		8B08DD721B3E61FB00B3FD8C /* Level3Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD711B3E61FB00B3FD8C /* Level3Scene.swift */; };
-		8B08DD741B3E620000B3FD8C /* Level4Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD731B3E620000B3FD8C /* Level4Scene.swift */; };
-		8B08DD761B3E620500B3FD8C /* Level5Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD751B3E620500B3FD8C /* Level5Scene.swift */; };
+		8B08DD831B3E7B4600B3FD8C /* Level2Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD821B3E7B4600B3FD8C /* Level2Scene.swift */; };
+		8B08DD851B3E7BC500B3FD8C /* Level3Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD841B3E7BC500B3FD8C /* Level3Scene.swift */; };
+		8B08DD871B3E7BCE00B3FD8C /* Level4Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD861B3E7BCE00B3FD8C /* Level4Scene.swift */; };
+		8B08DD891B3E7BD800B3FD8C /* Level5Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD881B3E7BD800B3FD8C /* Level5Scene.swift */; };
 		927F61A5196C771E000F43EF /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3517B978D7009739AE /* OpenAL.framework */; };
 		927F61A9196C771E000F43EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3D17B978D7009739AE /* Foundation.framework */; };
 		927F61AA196C771E000F43EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3F17B978D7009739AE /* CoreGraphics.framework */; };
@@ -182,10 +182,10 @@
 		8B08DD491B3E08E100B3FD8C /* LevelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelScene.swift; sourceTree = "<group>"; };
 		8B08DD6B1B3E4B6C00B3FD8C /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		8B08DD6D1B3E5B1000B3FD8C /* Level1Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level1Scene.swift; sourceTree = "<group>"; };
-		8B08DD6F1B3E61F300B3FD8C /* Level2Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level2Scene.swift; sourceTree = "<group>"; };
-		8B08DD711B3E61FB00B3FD8C /* Level3Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level3Scene.swift; sourceTree = "<group>"; };
-		8B08DD731B3E620000B3FD8C /* Level4Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level4Scene.swift; sourceTree = "<group>"; };
-		8B08DD751B3E620500B3FD8C /* Level5Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level5Scene.swift; sourceTree = "<group>"; };
+		8B08DD821B3E7B4600B3FD8C /* Level2Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level2Scene.swift; sourceTree = "<group>"; };
+		8B08DD841B3E7BC500B3FD8C /* Level3Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level3Scene.swift; sourceTree = "<group>"; };
+		8B08DD861B3E7BCE00B3FD8C /* Level4Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level4Scene.swift; sourceTree = "<group>"; };
+		8B08DD881B3E7BD800B3FD8C /* Level5Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level5Scene.swift; sourceTree = "<group>"; };
 		927F61BF196C771E000F43EF /* playmetodeath Android.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "playmetodeath Android.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -441,10 +441,10 @@
 			isa = PBXGroup;
 			children = (
 				8B08DD6D1B3E5B1000B3FD8C /* Level1Scene.swift */,
-				8B08DD6F1B3E61F300B3FD8C /* Level2Scene.swift */,
-				8B08DD711B3E61FB00B3FD8C /* Level3Scene.swift */,
-				8B08DD731B3E620000B3FD8C /* Level4Scene.swift */,
-				8B08DD751B3E620500B3FD8C /* Level5Scene.swift */,
+				8B08DD821B3E7B4600B3FD8C /* Level2Scene.swift */,
+				8B08DD841B3E7BC500B3FD8C /* Level3Scene.swift */,
+				8B08DD861B3E7BCE00B3FD8C /* Level4Scene.swift */,
+				8B08DD881B3E7BD800B3FD8C /* Level5Scene.swift */,
 			);
 			name = Levels;
 			sourceTree = "<group>";
@@ -843,14 +843,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B08DD6C1B3E4B6C00B3FD8C /* Hero.swift in Sources */,
-				8B08DD761B3E620500B3FD8C /* Level5Scene.swift in Sources */,
+				8B08DD891B3E7BD800B3FD8C /* Level5Scene.swift in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				8B08DD4A1B3E08E100B3FD8C /* LevelScene.swift in Sources */,
-				8B08DD701B3E61F300B3FD8C /* Level2Scene.swift in Sources */,
+				8B08DD831B3E7B4600B3FD8C /* Level2Scene.swift in Sources */,
 				8B08DD6E1B3E5B1000B3FD8C /* Level1Scene.swift in Sources */,
-				8B08DD721B3E61FB00B3FD8C /* Level3Scene.swift in Sources */,
+				8B08DD851B3E7BC500B3FD8C /* Level3Scene.swift in Sources */,
 				7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */,
-				8B08DD741B3E620000B3FD8C /* Level4Scene.swift in Sources */,
+				8B08DD871B3E7BCE00B3FD8C /* Level4Scene.swift in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
