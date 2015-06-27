@@ -11,6 +11,7 @@ class LevelScene : CCNode, CCPhysicsCollisionDelegate
 {
     var _hero: CCSprite?
     var _physicsNode: CCPhysicsNode?
+    var _level = 0
     
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
         moveHero(touch.locationInNode(self))
@@ -21,6 +22,7 @@ class LevelScene : CCNode, CCPhysicsCollisionDelegate
     }
     
     func ccPhysicsCollisionPostSolve(pair: CCPhysicsCollisionPair!, hero nodeA: CCNode!, wildcard nodeB: CCNode!) {
+        OALSimpleAudio.sharedInstance().stopAllEffects()
         removeHero()
         goToMainScene()
     }
@@ -30,6 +32,8 @@ class LevelScene : CCNode, CCPhysicsCollisionDelegate
         if let physicsNode = _physicsNode {
             physicsNode.collisionDelegate = self
         }
+        
+        OALSimpleAudio.sharedInstance().playEffect("Level" + String(_level) + ".caf")
     }
     
     func moveHero(location: CGPoint) {
@@ -45,7 +49,6 @@ class LevelScene : CCNode, CCPhysicsCollisionDelegate
     }
     
     func goToMainScene() {
-        let mainScene = CCBReader.loadAsScene("MainScene")
-        CCDirector.sharedDirector().replaceScene(mainScene)
+        Navigator.GoToLevel(self._level)
     }
 }

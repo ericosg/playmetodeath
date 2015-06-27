@@ -9,4 +9,15 @@
 import Foundation
 class Level1Scene: LevelScene {
     
+    override init() {
+        super.init()
+        
+        self._level = 1;
+    }
+    
+    override func didLoadFromCCB() {
+        super.didLoadFromCCB()
+        
+        
+    }
 }
