@@ -21,7 +21,8 @@ class LevelScene : CCNode, CCPhysicsCollisionDelegate
     }
     
     func ccPhysicsCollisionPostSolve(pair: CCPhysicsCollisionPair!, hero nodeA: CCNode!, wildcard nodeB: CCNode!) {
-        println("hit")
+        removeHero()
+        goToMainScene()
     }
     
     func didLoadFromCCB() {
@@ -35,5 +36,16 @@ class LevelScene : CCNode, CCPhysicsCollisionDelegate
         if let hero = _hero {
             hero.position =  location
         }
+    }
+    
+    func removeHero() {
+        if let hero = _hero {
+            hero.removeFromParent()
+        }
+    }
+    
+    func goToMainScene() {
+        let mainScene = CCBReader.loadAsScene("MainScene")
+        CCDirector.sharedDirector().replaceScene(mainScene)
     }
 }

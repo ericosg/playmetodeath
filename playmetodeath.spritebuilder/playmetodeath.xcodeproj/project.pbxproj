@@ -46,6 +46,11 @@
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		8B08DD4A1B3E08E100B3FD8C /* LevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD491B3E08E100B3FD8C /* LevelScene.swift */; };
 		8B08DD6C1B3E4B6C00B3FD8C /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD6B1B3E4B6C00B3FD8C /* Hero.swift */; };
+		8B08DD6E1B3E5B1000B3FD8C /* Level1Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD6D1B3E5B1000B3FD8C /* Level1Scene.swift */; };
+		8B08DD701B3E61F300B3FD8C /* Level2Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD6F1B3E61F300B3FD8C /* Level2Scene.swift */; };
+		8B08DD721B3E61FB00B3FD8C /* Level3Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD711B3E61FB00B3FD8C /* Level3Scene.swift */; };
+		8B08DD741B3E620000B3FD8C /* Level4Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD731B3E620000B3FD8C /* Level4Scene.swift */; };
+		8B08DD761B3E620500B3FD8C /* Level5Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD751B3E620500B3FD8C /* Level5Scene.swift */; };
 		927F61A5196C771E000F43EF /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3517B978D7009739AE /* OpenAL.framework */; };
 		927F61A9196C771E000F43EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3D17B978D7009739AE /* Foundation.framework */; };
 		927F61AA196C771E000F43EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3F17B978D7009739AE /* CoreGraphics.framework */; };
@@ -176,6 +181,11 @@
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		8B08DD491B3E08E100B3FD8C /* LevelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelScene.swift; sourceTree = "<group>"; };
 		8B08DD6B1B3E4B6C00B3FD8C /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		8B08DD6D1B3E5B1000B3FD8C /* Level1Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level1Scene.swift; sourceTree = "<group>"; };
+		8B08DD6F1B3E61F300B3FD8C /* Level2Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level2Scene.swift; sourceTree = "<group>"; };
+		8B08DD711B3E61FB00B3FD8C /* Level3Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level3Scene.swift; sourceTree = "<group>"; };
+		8B08DD731B3E620000B3FD8C /* Level4Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level4Scene.swift; sourceTree = "<group>"; };
+		8B08DD751B3E620500B3FD8C /* Level5Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level5Scene.swift; sourceTree = "<group>"; };
 		927F61BF196C771E000F43EF /* playmetodeath Android.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "playmetodeath Android.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -427,6 +437,18 @@
 			name = Mac;
 			sourceTree = "<group>";
 		};
+		8B08DD771B3E620B00B3FD8C /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				8B08DD6D1B3E5B1000B3FD8C /* Level1Scene.swift */,
+				8B08DD6F1B3E61F300B3FD8C /* Level2Scene.swift */,
+				8B08DD711B3E61FB00B3FD8C /* Level3Scene.swift */,
+				8B08DD731B3E620000B3FD8C /* Level4Scene.swift */,
+				8B08DD751B3E620500B3FD8C /* Level5Scene.swift */,
+			);
+			name = Levels;
+			sourceTree = "<group>";
+		};
 		9222E2B918734FF800A246C7 /* libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -442,6 +464,7 @@
 				7A046D7519E84C36004C4763 /* MainScene.swift */,
 				D352B48019EC608A00829775 /* MetalShaders */,
 				8B08DD491B3E08E100B3FD8C /* LevelScene.swift */,
+				8B08DD771B3E620B00B3FD8C /* Levels */,
 				8B08DD6B1B3E4B6C00B3FD8C /* Hero.swift */,
 			);
 			name = Source;
@@ -820,9 +843,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B08DD6C1B3E4B6C00B3FD8C /* Hero.swift in Sources */,
+				8B08DD761B3E620500B3FD8C /* Level5Scene.swift in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				8B08DD4A1B3E08E100B3FD8C /* LevelScene.swift in Sources */,
+				8B08DD701B3E61F300B3FD8C /* Level2Scene.swift in Sources */,
+				8B08DD6E1B3E5B1000B3FD8C /* Level1Scene.swift in Sources */,
+				8B08DD721B3E61FB00B3FD8C /* Level3Scene.swift in Sources */,
 				7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */,
+				8B08DD741B3E620000B3FD8C /* Level4Scene.swift in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1133,7 +1161,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1166,7 +1194,7 @@
 				PRODUCT_NAME = playmetodeath;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
