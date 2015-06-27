@@ -12,4 +12,14 @@ class Hero: CCSprite {
     func didLoadFromCCB() {
         self.physicsBody.collisionType = "hero";
     }
+    
+    static var Position: CGPoint?
+    
+    func Store() {
+        Hero.Position = self.position
+    }
+    
+    func Restore() {
+        self.position = Hero.Position ?? self.position
+    }
 }

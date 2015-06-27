@@ -9,23 +9,23 @@
 import Foundation
 class LevelScene : CCNode, CCPhysicsCollisionDelegate
 {
-    var _hero: CCSprite?
+    var _hero: Hero?
     var _physicsNode: CCPhysicsNode?
     var _level = 0
+    var _levelPart = 0
     var _pointsTxt: CCLabelTTF?
-    var _points = Double(0)
     
-    let _tpPoints = 100
-    let _holdPoints = 10
+    let _tpPoints = 10
+    let _holdPoints = 1
     
     func addPoints(pointsToAdd: Int) {
-        _points += Double(pointsToAdd)
-        _pointsTxt?.string = String(format:"%.0f", _points)
+        Score.Points += Double(pointsToAdd)
+        _pointsTxt?.string = String(format:"%.0f", Score.Points)
     }
     
     func resetPoints() {
-        _points = 0
-        _pointsTxt?.string = String(format:"%.0f", _points)
+        Score.ResetPointsToBank()
+        _pointsTxt?.string = String(format:"%.0f", Score.Points)
     }
     
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
@@ -39,21 +39,40 @@ class LevelScene : CCNode, CCPhysicsCollisionDelegate
     }
     
     func ccPhysicsCollisionPostSolve(pair: CCPhysicsCollisionPair!, hero nodeA: CCNode!, wildcard nodeB: CCNode!) {
-        OALSimpleAudio.sharedInstance().stopAllEffects()
+        FailLevel()
+    }
+    
+    func FailLevel() {
+        AudioPlayer.Stop()
         //CCDirector.sharedDirector().pause()
         //removeHero()
-        goToMainScene()
+        restartLevel()
+    }
+    
+    func end(sender: AnyObject?) {
+        PassedLevel()
+    }
+    
+    func PassedLevel() {
+        Score.Bank()
+        if let hero = _hero {
+            hero.Store()
+        }
+        Navigator.GoToLevel(_level + 1)
     }
     
     func didLoadFromCCB() {
         resetPoints()
+        if let hero = _hero {
+            hero.Restore()
+        }
         
         userInteractionEnabled = true
         if let physicsNode = _physicsNode {
             physicsNode.collisionDelegate = self
         }
         
-        OALSimpleAudio.sharedInstance().playEffect("Level" + String(_level) + ".caf")
+        AudioPlayer.Play(_levelPart)
     }
     
     func moveHero(location: CGPoint) {
@@ -68,7 +87,7 @@ class LevelScene : CCNode, CCPhysicsCollisionDelegate
         }
     }
     
-    func goToMainScene() {
-        Navigator.GoToLevel(self._level)
+    func restartLevel() {
+        Navigator.GoToLevel(self._levelPart)
     }
 }

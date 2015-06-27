@@ -44,7 +44,6 @@
 		7A97911719E631C6001FFC4D /* libcocos2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A97910419E62E40001FFC4D /* libcocos2d-mac.a */; };
 		7A97911819E631CD001FFC4D /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9790FE19E62E40001FFC4D /* libcocos2d.a */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
-		8B08DD4A1B3E08E100B3FD8C /* LevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD491B3E08E100B3FD8C /* LevelScene.swift */; };
 		8B08DD6C1B3E4B6C00B3FD8C /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD6B1B3E4B6C00B3FD8C /* Hero.swift */; };
 		8B08DD6E1B3E5B1000B3FD8C /* Level1Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD6D1B3E5B1000B3FD8C /* Level1Scene.swift */; };
 		8B08DD831B3E7B4600B3FD8C /* Level2Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD821B3E7B4600B3FD8C /* Level2Scene.swift */; };
@@ -55,6 +54,9 @@
 		8B08DD951B3E929A00B3FD8C /* Level1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8B08DD931B3E929A00B3FD8C /* Level1.caf */; };
 		8B08DD981B3E9CD700B3FD8C /* Preloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD971B3E9CD700B3FD8C /* Preloader.swift */; };
 		8B08DD9A1B3E9D9A00B3FD8C /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD991B3E9D9A00B3FD8C /* Navigator.swift */; };
+		8B08DD9C1B3F3BCE00B3FD8C /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD9B1B3F3BCE00B3FD8C /* Score.swift */; };
+		8B08DDA61B3F5ACF00B3FD8C /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DDA51B3F5ACF00B3FD8C /* AudioPlayer.swift */; };
+		8B08DDA81B3F5B4C00B3FD8C /* LevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DDA71B3F5B4C00B3FD8C /* LevelScene.swift */; };
 		927F61A5196C771E000F43EF /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3517B978D7009739AE /* OpenAL.framework */; };
 		927F61A9196C771E000F43EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3D17B978D7009739AE /* Foundation.framework */; };
 		927F61AA196C771E000F43EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3F17B978D7009739AE /* CoreGraphics.framework */; };
@@ -183,7 +185,6 @@
 		7AFCD5DD19E9BDC200BCCCDA /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Source/Bridging-Header.h"; sourceTree = "<group>"; };
 		7BF6AF9F1A425F9800FFF9BA /* JavaFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaFoundation.framework; path = "../../../../../../../Library/SBAndroid/Application Support/Developer/Shared/Xcode/Platforms/Android.platform/Developer/SDKs/SBAndroid.sdk/System/Library/Frameworks/JavaFoundation.framework"; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
-		8B08DD491B3E08E100B3FD8C /* LevelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelScene.swift; sourceTree = "<group>"; };
 		8B08DD6B1B3E4B6C00B3FD8C /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		8B08DD6D1B3E5B1000B3FD8C /* Level1Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level1Scene.swift; sourceTree = "<group>"; };
 		8B08DD821B3E7B4600B3FD8C /* Level2Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level2Scene.swift; sourceTree = "<group>"; };
@@ -193,6 +194,9 @@
 		8B08DD931B3E929A00B3FD8C /* Level1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Level1.caf; sourceTree = "<group>"; };
 		8B08DD971B3E9CD700B3FD8C /* Preloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preloader.swift; sourceTree = "<group>"; };
 		8B08DD991B3E9D9A00B3FD8C /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		8B08DD9B1B3F3BCE00B3FD8C /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		8B08DDA51B3F5ACF00B3FD8C /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		8B08DDA71B3F5B4C00B3FD8C /* LevelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelScene.swift; sourceTree = "<group>"; };
 		927F61BF196C771E000F43EF /* playmetodeath Android.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "playmetodeath Android.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -469,6 +473,8 @@
 			children = (
 				8B08DD971B3E9CD700B3FD8C /* Preloader.swift */,
 				8B08DD991B3E9D9A00B3FD8C /* Navigator.swift */,
+				8B08DD9B1B3F3BCE00B3FD8C /* Score.swift */,
+				8B08DDA51B3F5ACF00B3FD8C /* AudioPlayer.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -486,11 +492,11 @@
 			children = (
 				8B08DD961B3E9C8B00B3FD8C /* Helpers */,
 				7A40362019DDEF0D007B6E8F /* Platforms */,
-				7A046D7519E84C36004C4763 /* MainScene.swift */,
-				D352B48019EC608A00829775 /* MetalShaders */,
-				8B08DD491B3E08E100B3FD8C /* LevelScene.swift */,
 				8B08DD771B3E620B00B3FD8C /* Levels */,
+				D352B48019EC608A00829775 /* MetalShaders */,
 				8B08DD6B1B3E4B6C00B3FD8C /* Hero.swift */,
+				8B08DDA71B3F5B4C00B3FD8C /* LevelScene.swift */,
+				7A046D7519E84C36004C4763 /* MainScene.swift */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -873,15 +879,17 @@
 				8B08DD6C1B3E4B6C00B3FD8C /* Hero.swift in Sources */,
 				8B08DD891B3E7BD800B3FD8C /* Level5Scene.swift in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
-				8B08DD4A1B3E08E100B3FD8C /* LevelScene.swift in Sources */,
 				8B08DD831B3E7B4600B3FD8C /* Level2Scene.swift in Sources */,
 				8B08DD9A1B3E9D9A00B3FD8C /* Navigator.swift in Sources */,
+				8B08DDA81B3F5B4C00B3FD8C /* LevelScene.swift in Sources */,
 				8B08DD6E1B3E5B1000B3FD8C /* Level1Scene.swift in Sources */,
 				8B08DD851B3E7BC500B3FD8C /* Level3Scene.swift in Sources */,
+				8B08DD9C1B3F3BCE00B3FD8C /* Score.swift in Sources */,
 				7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */,
 				8B08DD871B3E7BCE00B3FD8C /* Level4Scene.swift in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
 				8B08DD981B3E9CD700B3FD8C /* Preloader.swift in Sources */,
+				8B08DDA61B3F5ACF00B3FD8C /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

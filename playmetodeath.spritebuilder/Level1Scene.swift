@@ -12,7 +12,8 @@ class Level1Scene: LevelScene {
     override init() {
         super.init()
         
-        self._level = 1;
+        self._level = 1
+        self._levelPart = 1
     }
     
     override func didLoadFromCCB() {
