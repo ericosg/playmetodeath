@@ -12,22 +12,42 @@ class LevelScene : CCNode, CCPhysicsCollisionDelegate
     var _hero: CCSprite?
     var _physicsNode: CCPhysicsNode?
     var _level = 0
+    var _pointsTxt: CCLabelTTF?
+    var _points = Double(0)
+    
+    let _tpPoints = 100
+    let _holdPoints = 10
+    
+    func addPoints(pointsToAdd: Int) {
+        _points += Double(pointsToAdd)
+        _pointsTxt?.string = String(format:"%.0f", _points)
+    }
+    
+    func resetPoints() {
+        _points = 0
+        _pointsTxt?.string = String(format:"%.0f", _points)
+    }
     
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
         moveHero(touch.locationInNode(self))
+        addPoints(_tpPoints)
     }
     
     override func touchMoved(touch: CCTouch!, withEvent event: CCTouchEvent!) {
         moveHero(touch.locationInNode(self))
+        addPoints(_holdPoints)
     }
     
     func ccPhysicsCollisionPostSolve(pair: CCPhysicsCollisionPair!, hero nodeA: CCNode!, wildcard nodeB: CCNode!) {
         OALSimpleAudio.sharedInstance().stopAllEffects()
-        removeHero()
+        //CCDirector.sharedDirector().pause()
+        //removeHero()
         goToMainScene()
     }
     
     func didLoadFromCCB() {
+        resetPoints()
+        
         userInteractionEnabled = true
         if let physicsNode = _physicsNode {
             physicsNode.collisionDelegate = self
