@@ -96,7 +96,7 @@ class LevelScene : CCNode, CCPhysicsCollisionDelegate, UIAlertViewDelegate
         restartLevel()
     }
     
-    func end(sender: AnyObject?) {
+    func stageEnd(sender: AnyObject?) {
         PassedLevel()
     }
     

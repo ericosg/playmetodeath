@@ -10,7 +10,7 @@ import Foundation
 class Hero: CCSprite {
     
     func didLoadFromCCB() {
-        self.physicsBody.collisionType = "hero";
+        self.physicsBody.collisionType = "heros";
     }
     
     static var Position: CGPoint?

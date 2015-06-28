@@ -211,7 +211,7 @@
 						<key>displayName</key>
 						<string>block</string>
 						<key>memberVarAssignmentName</key>
-						<string></string>
+						<string>_ground</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>physicsBody</key>
@@ -384,6 +384,8 @@
 								<array/>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -1276,37 +1278,20 @@
 			<key>callbackChannel</key>
 			<dict>
 				<key>keyframes</key>
-				<array>
-					<dict>
-						<key>easing</key>
-						<dict>
-							<key>type</key>
-							<integer>0</integer>
-						</dict>
-						<key>time</key>
-						<real>24</real>
-						<key>type</key>
-						<integer>12</integer>
-						<key>value</key>
-						<array>
-							<string>end:</string>
-							<integer>1</integer>
-						</array>
-					</dict>
-				</array>
+				<array/>
 				<key>type</key>
 				<integer>12</integer>
 			</dict>
 			<key>chainedSequenceId</key>
 			<integer>-1</integer>
 			<key>length</key>
-			<real>2</real>
+			<real>122</real>
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>1.3333333730697632</real>
+			<real>2</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

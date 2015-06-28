@@ -39,13 +39,10 @@ class Level2Scene: LevelScene {
         makeBall(310, offsetY: 1960, duration: 12)
         makeBall(295, offsetY: 1560, duration: 12.5)
         makeBall(139, offsetY: 1360, duration: 13)
-        makeBall(120, offsetY: 2360, duration: 13)
-        makeBall(480, offsetY: 3500, duration: 13.5)
-        makeBall(200, offsetY: 4560, duration: 14)
-        makeBall(244, offsetY: 9700, duration: 14.5)
+        makeBall(120, offsetY: 2360, duration: 13, end: true)
     }
     
-    func makeBall(x: CGFloat, offsetY:CGFloat, duration:CCTime) {
+    func makeBall(x: CGFloat, offsetY:CGFloat, duration:CCTime, end: Bool = false) {
         let ball = CCBReader.load("Ball")
         ball.position = CGPoint(x: x, y: 768+offsetY)
         
@@ -59,15 +56,25 @@ class Level2Scene: LevelScene {
         let holdup = CCActionCallBlock { () -> Void in
             ball.physicsBody.affectedByGravity = true
         }
-        ball.runAction(CCActionSequence(array: [delay, holdup]))
+        
+        if(end) {
+            let endDelay = CCActionDelay(duration: 10)
+            let endCall = CCActionCallBlock(block: { () -> Void in
+                self.stageEnd(self)
+            })
+            
+            ball.runAction(CCActionSequence(array: [delay, holdup, endDelay, endCall]))
+        } else {
+            ball.runAction(CCActionSequence(array: [delay, holdup]))
+        }
     }
     
     func moveGround() {
         if let ground = _ground {
-            let delay = CCActionDelay(duration: 11)
+            let delay = CCActionDelay(duration: 15)
             let move = CCActionMoveTo(duration: 1, position: CGPoint(x: 256, y: -58))
             let disable = CCActionCallBlock { () -> Void in
-                ground.physicsBody.sensor = false
+                ground.physicsNode().removeChild(ground, cleanup: true)
             }
             
             ground.runAction(CCActionSequence(array: [delay, move, disable]))
