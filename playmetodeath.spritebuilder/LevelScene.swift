@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class LevelScene : CCNode, CCPhysicsCollisionDelegate
+class LevelScene : CCNode, CCPhysicsCollisionDelegate, UIAlertViewDelegate
 {
     var _hero: Hero?
     var _physicsNode: CCPhysicsNode?
@@ -36,6 +36,53 @@ class LevelScene : CCNode, CCPhysicsCollisionDelegate
     override func touchMoved(touch: CCTouch!, withEvent event: CCTouchEvent!) {
         moveHero(touch.locationInNode(self))
         addPoints(_holdPoints)
+    }
+    
+    func pause() {
+        CCDirector.sharedDirector().pause()
+        AudioPlayer.Pause()
+    }
+    
+    func resume() {
+        CCDirector.sharedDirector().resume()
+        AudioPlayer.Resume()
+    }
+    
+    func pauseMenu() {
+        pause()
+        
+        if objc_getClass("UIAlertController") != nil  {
+            // use UIAlertController(ios8)
+            var refreshAlert = UIAlertController(title: "", message: "Exit to menu?", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            refreshAlert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { (action: UIAlertAction!) in
+                Navigator.GoToMenu()
+            }))
+            
+            refreshAlert.addAction(UIAlertAction(title: "No", style: .Default, handler: { (action: UIAlertAction!) in
+                self.resume()
+            }))
+            
+            CCDirector.sharedDirector().presentViewController(refreshAlert, animated: true, completion: nil)
+        } else {
+            // use UIAlertView (ios7)
+            let alert: UIAlertView = UIAlertView()
+            alert.title = ""
+            alert.message = "Exit to menu?"
+            let yesBut = alert.addButtonWithTitle("Yes")
+            let noBut = alert.addButtonWithTitle("No")
+            alert.delegate = self
+            alert.show()
+        }
+    }
+    
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+        let buttonTitle = alertView.buttonTitleAtIndex(buttonIndex)
+        if buttonTitle == "Yes" {
+            Navigator.GoToMenu()
+        } else {
+            resume()
+        }
     }
     
     func ccPhysicsCollisionPostSolve(pair: CCPhysicsCollisionPair!, hero nodeA: CCNode!, wildcard nodeB: CCNode!) {
@@ -68,11 +115,19 @@ class LevelScene : CCNode, CCPhysicsCollisionDelegate
         }
         
         userInteractionEnabled = true
+        multipleTouchEnabled = true
+        enableTripleTouch()
         if let physicsNode = _physicsNode {
             physicsNode.collisionDelegate = self
         }
         
         AudioPlayer.Play(_levelPart)
+    }
+    
+    func enableTripleTouch() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: "pauseMenu")
+        tapGesture.numberOfTouchesRequired = 3
+        CCDirector.sharedDirector().view.addGestureRecognizer(tapGesture)
     }
     
     func moveHero(location: CGPoint) {

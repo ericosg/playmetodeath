@@ -22,4 +22,12 @@ class AudioPlayer {
         OALSimpleAudio.sharedInstance().stopAllEffects()
         AudioPlayer.currentlyPlaying = 0
     }
+    
+    class func Pause() {
+        OALSimpleAudio.sharedInstance().paused = true
+    }
+    
+    class func Resume() {
+        OALSimpleAudio.sharedInstance().paused = false
+    }
 }

@@ -13,4 +13,11 @@ class Navigator {
             CCDirector.sharedDirector().replaceScene(levelScene)
         }
     }
+    
+    class func GoToMenu() {
+        if let mainScene = CCBReader.loadAsScene("MainScene") {
+            AudioPlayer.Stop()
+            CCDirector.sharedDirector().replaceScene(mainScene)
+        }
+    }
 }
