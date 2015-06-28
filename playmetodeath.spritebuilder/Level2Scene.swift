@@ -36,13 +36,13 @@ class Level2Scene: LevelScene {
         
         moveGround()
         
-        makeBall(310, offsetY: 1960, duration: 12)
+        makeBall(356, offsetY: 3960, duration: 12)
         makeBall(295, offsetY: 1560, duration: 12.5)
-        makeBall(139, offsetY: 1360, duration: 13)
+        makeBall(139, offsetY: 4360, duration: 13)
         makeBall(120, offsetY: 2360, duration: 13, end: true)
     }
     
-    func makeBall(x: CGFloat, offsetY:CGFloat, duration:CCTime, end: Bool = false) {
+    func makeBall(x: CGFloat, offsetY:CGFloat, duration:CCTime, end: Bool = false, force: Bool = false) {
         let ball = CCBReader.load("Ball")
         ball.position = CGPoint(x: x, y: 768+offsetY)
         
@@ -51,6 +51,20 @@ class Level2Scene: LevelScene {
         }
         
         ball.physicsBody.affectedByGravity = false
+        
+        if(force) {
+//            let rotationRadians = CC_DEGREES_TO_RADIANS(210)
+//            
+//            let directionVector = ccp(CGFloat(sinf(rotationRadians)), CGFloat(cosf(rotationRadians)))
+//            let ballOffset = ccpMult(directionVector, 50)
+//            
+//            ball.position = ccpAdd(_launcher!.position, ballOffset)
+//            
+//            var useTheForceLucas += CGFloat(10000)
+//            let force = ccpMult(directionVector, useTheForceLucas)
+//            
+//            ball.physicsBody.applyForce(force)
+        }
         
         let delay = CCActionDelay(duration: duration)
         let holdup = CCActionCallBlock { () -> Void in
