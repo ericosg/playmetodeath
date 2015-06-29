@@ -911,7 +911,7 @@
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>LevelScene</string>
+		<string>Level4Scene</string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
